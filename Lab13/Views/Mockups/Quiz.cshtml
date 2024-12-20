@@ -1,0 +1,17 @@
+﻿@model Lab13.Models.QuizQuestion
+
+<h1>Quiz</h1>
+<p>@Model.Num1 @Model.Operation @Model.Num2 =</p>
+
+<form method="post">
+    <input type="hidden" asp-for="Num1" />
+    <input type="hidden" asp-for="Num2" />
+    <input type="hidden" asp-for="Operation" />
+    <div>
+        <label for="UsersAnswer">Your Answer:</label>
+        <input id="UsersAnswer" asp-for="UsersAnswer" />
+        <span asp-validation-for="UsersAnswer" class="text-danger"></span>
+    </div>
+
+    <button type="submit">Next</button>
+</form>

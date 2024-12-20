@@ -1,0 +1,14 @@
+﻿@model List<Lab13.Models.QuizQuestion>
+
+<h1>Quiz Results</h1>
+<p>Correct Answers: @ViewBag.CorrectAnswers / @ViewBag.TotalQuestions</p>
+
+<ol>
+    @foreach (var question in Model)
+    {
+        <li>
+            @question.Num1 @question.Operation @question.Num2 = @question.CorrectAnswer
+            (Your Answer: @question.UsersAnswer)
+        </li>
+    }
+</ol>
